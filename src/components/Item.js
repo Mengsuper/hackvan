@@ -9,7 +9,7 @@ export default class Item extends Component {
         let item = this.props.item;
         return (
             <div>
-                <Thumbnail src="/image/fbIcon.png" alt="171x180" responsive />
+                <Thumbnail src={ item.productImage } alt="171x180" responsive="true" />
                 <h3> Product Title: { item.productTitle }  </h3>
                 <p> Price: { item.price } </p>
                 <p> Purchase date: { item.purchaseDate } </p>

@@ -18,11 +18,11 @@ export default class Items extends Component {
             <div>
                 <ListGroup>
                     {
-                        this.state.purchasedItems.map((item, index) => {
+                        this.state.purchasedItems.map((item, index) => (
                             <ListGroupItem> 
                                 <Item item={ item } /> 
                             </ListGroupItem>
-                        })
+                        ))
                     }
                     <ListGroupItem header="Heading 2" href="#">
                         Linked item
