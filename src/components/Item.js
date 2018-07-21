@@ -15,7 +15,7 @@ export default class Item extends Component {
                 <p> Purchase date: { item.purchaseDate } </p>
                 <p> Return date: { item.returnDate } </p>
                 <p> Category { item.type } </p>
-                <p> Category { item.productLink } </p>
+                <p> Product Link { item.productLink } </p>
             </div>
         )
     }
