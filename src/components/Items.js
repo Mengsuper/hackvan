@@ -5,12 +5,12 @@ import Item from './Item';
 export default class Items extends Component {
 
     render() {
-        const {filteredProducts} = this.props;
+        const {filteredItems} = this.props;
         return (
             <div>
                 <ListGroup>
                     {
-                        filteredProducts.map((item, index) => (
+                        filteredItems.map((item, index) => (
                             <ListGroupItem>
                                 <Item item={ item } />
                             </ListGroupItem>

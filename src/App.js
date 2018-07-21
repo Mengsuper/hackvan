@@ -10,12 +10,12 @@ class App extends Component {
         super();
         this.state = {
           searchfield: '',
-          products: []
+          items: []
         }
     }
 
     componentDidMount() {
-        this.setState({ products: purchasedItems });
+        this.setState({ items: purchasedItems });
     }
 
   onSearchChange = (event) => {
@@ -23,8 +23,8 @@ class App extends Component {
   }
 
   render() {
-    const { searchfield, products } = this.state;
-    const filteredProducts = products.filter(item =>
+    const { searchfield, items } = this.state;
+    const filteredItems = items.filter(item =>
       item.productTitle.toLowerCase().includes(searchfield.toLowerCase()));
     return (
       <div className="App">
@@ -36,7 +36,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <SearchBox searchChange={this.onSearchChange}/>
-        <Items filteredProducts={filteredProducts}/>
+        <Items filteredItems={filteredItems}/>
       </div>
     );
   }
