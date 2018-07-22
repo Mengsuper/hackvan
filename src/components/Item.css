@@ -2,10 +2,14 @@
     padding: 0px;
 }
 
+.media-left {
+    margin-right: 5px;
+}
+
 .media-body {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
+    border: 3px;
     padding: 5px;
 }
 
@@ -13,12 +17,34 @@
     margin-top: 10px;
 }
 
-.media-heading {
-    margin: auto;
+#compName {
+    margin-bottom: 0px;
     width: 100%;
-    border: 3px solid blue;
+    border: 3px;
     padding: 0px;
-    text-align: left
+    text-align: left;
+    color: #2183BD;
+    font-family: sans-serif;
+}
+
+#itemName {
+    margin-bottom: 10px;
+    width: 100%;
+    border: 3px;
+    padding: 0px;
+    text-align: left;
+    font-family: Courier;
+    text-transform: uppercase;
+}
+
+#date {
+    color: gray;
+    margin-bottom: -10px;
+}
+
+#itemImage {
+    border: 1px solid;
+    border-color: #ACB1B4;
 }
 
 

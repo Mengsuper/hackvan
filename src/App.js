@@ -6,26 +6,44 @@ import SearchBox from './components/SearchBox';
 // import Navigation from './components/Navigation';
 import CompanyInfo from './components/Company/CompanyInfo';
 import purchasedItems from './components/dataset/purchase_history.json';
-import Test from './components/Test';
 
 class App extends Component {
   constructor() {
       super();
       this.state = {
         searchfield: '',
-        items: [],
-        route: 'home',
-        display: {}
+        purchasedItems: [],
+        displayCompany: false,
+        displayProduct: false,
+        selectedItem: {}
       }
-      this.handleCompanyClick = this.handleCompanyClick.bind(this);
+      this.handleImageClick = this.handleImageClick.bind(this);
+      this.handleBackToHome = this.handleBackToHome.bind(this);
   }
 
   componentDidMount() {
-    this.setState({ items: purchasedItems });
+    this.setState({ purchasedItems });
   }
 
-  handleCompanyClick(item) {
-    this.setState({route: 'companyinfo', display: item});
+  handleImageClick(item, type) {
+    if (type === 'company') {
+      this.setState(prevState => ({
+        displayCompany: !prevState.displayCompany,
+        selectedItem: item
+      }));
+    } else if (type === 'product') {
+      this.setState(prevState => ({
+        displayProduct: !prevState.displayProduct,
+        selectedItem: item
+      }));
+    }
+  }
+
+  handleBackToHome() {
+    this.setState({
+      displayCompany: false,
+      displayProduct: false
+    })
   }
 
   onSearchChange = (event) => {
@@ -33,36 +51,33 @@ class App extends Component {
   }
 
   render() {
-    const { searchfield, items, route, display } = this.state;
-    const filteredItems = items.filter(item =>
-      item.productTitle.toLowerCase().includes(searchfield.toLowerCase()));
-      switch(route) {
-        case "home":
-          return (
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1 className="App-title">Welcome to HackVan</h1>
-              </header>
-              <p className="App-intro">
-                To get started, edit <code>src/App.js</code> and save to reload.
-              </p>
-              <SearchBox searchChange={this.onSearchChange}/>
-              <Items
-                filteredItems={filteredItems}
-                handleCompanyClick={this.handleCompanyClick}
-              />
-            </div>
-          );
-          break;
-        case "companyinfo":
-          return (
-            <div>
-              <CompanyInfo company={display}/>
-            </div>
-          );
-          break;
-      }
+    const { searchfield, purchasedItems } = this.state;
+    const filteredItems = purchasedItems.filter(item => item.productTitle.toLowerCase().includes(searchfield.toLowerCase()));
+
+    return (
+      <div>
+        {this.state.displayCompany && <CompanyInfo item={this.state.selectedItem} items={this.state.purchasedItems}
+          handleBackToHome={this.handleBackToHome}/>}
+
+        {!this.state.displayCompany && !this.state.displayProduct &&
+          <div className="App">
+            <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h1 className="App-title">Welcome to HackVan</h1>
+            </header>
+            
+
+
+            <SearchBox searchChange={this.onSearchChange}/>
+
+            <Items filteredItems={filteredItems} handleImageClick={this.handleImageClick} />
+
+          </div>
+        }
+
+      </div>
+    );
+
   }
 }
 

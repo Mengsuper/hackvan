@@ -14,25 +14,20 @@ export default class Items extends Component {
     componentDidMount() {
         this.setState({ purchasedItems })
     }
-    async fetchProductLinks (url) {
-        await fetch(url)
-            .then(res => res.json())
-            .then(data => console.log(data));
-    }
 
     render() {
-        const {filteredItems, handleCompanyClick} = this.props;
+        const {filteredItems, handleImageClick} = this.props;
         return (
             <Grid>
                 <Row>
                     <Col>
                         <ListGroup>
                             {
-                            this.state.purchasedItems.map((item, index) => (
+                            filteredItems.map((item, index) => (
                                 <ListGroupItem key={index}>
                                 <Item
                                     item={ item }
-                                    handleCompanyClick={handleCompanyClick}
+                                    handleImageClick={handleImageClick}
                                 />
                                 </ListGroupItem>
                             ))

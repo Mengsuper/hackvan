@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Thumbnail, Media } from 'react-bootstrap';
+import { Media } from 'react-bootstrap';
 import './Item.css';
 
 export default class Item extends Component {
@@ -8,44 +8,48 @@ export default class Item extends Component {
         this.handleClick=this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.props.handleCompanyClick(this.props.item);
+    handleClick(item, type) {
+        this.props.handleImageClick(item, type);
     }
 
     render() {
-        const {item} = this.props;
+        const { item } = this.props;
         return (
             <div>
                 <Media.List>
                     <Media.ListItem>
                         <Media.Left>
-                            <img
-                                width={64} height={64} src={ item.productImage } alt="thumbnail"
-                                onClick={this.handleClick}/>
+                            <img width={64} height={64} src={ item.productImage } alt="thumbnail"
+                                onClick={this.handleClick.bind(this, item, 'company')}/>
+                        
                         </Media.Left>
                         <Media.Body>
-                            <Media.Heading> {item.companyName} </Media.Heading>
+                            <Media.Heading id="compName" onClick={this.handleClick.bind(this, item, 'company')} > {item.companyName} </Media.Heading>
+                        <Media>
+                    
+                            <Media.Body>
+                                <Media.Heading id="itemName">{ item.productTitle.substring(0,60) } </Media.Heading>
+                            </Media.Body>
+                        </Media>
                         <Media>
                             <Media.Left>
-                            <img width={128} height={128} src={ item.productImage } alt="thumbnail" />
+                                <img
+                                    id="itemImage"
+                                    width="300px" height="auto"
+                                    src={ item.productImage } alt="thumbnail"
+                                />
                             </Media.Left>
-                            <Media.Body>
-                                <Media.Heading> { item.productTitle.substring(0, 50) }  </Media.Heading>
-                                <p> Price: { item.price } </p>
-                                <p> Purchase date: { item.purchaseDate } </p>
-                                <p> Return date: { item.returnDate } </p>
-                                <p> Category: { item.type } </p>
-                                <p> Link: { item.productLink } </p>
-                            </Media.Body>
+                        </Media>
+                        <Media>
+                            <Media.Left>
+                                <p id="date"> { item.purchaseDate } </p>
+                            </Media.Left>
                         </Media>
                         </Media.Body>
                     </Media.ListItem>
                 </Media.List>
 
-
->>>>>>> 276931e92ca87528b68eaf04762777e572e038e4
             </div>
-
         )
     }
 }
