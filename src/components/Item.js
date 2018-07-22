@@ -21,30 +21,35 @@ export default class Item extends Component {
                         <Media.Left>
                             <img width={64} height={64} src={ item.productImage } alt="thumbnail"
                                 onClick={this.handleClick.bind(this, item, 'company')}/>
+                        
                         </Media.Left>
                         <Media.Body>
-                            <Media.Heading> {item.companyName} </Media.Heading>
+                            <Media.Heading id="compName"> {item.companyName} </Media.Heading>
+                        <Media>
+                    
+                            <Media.Body>
+                                <Media.Heading id="itemName">{ item.productTitle.substring(0,60) } </Media.Heading>
+                            </Media.Body>
+                        </Media>
                         <Media>
                             <Media.Left>
-                            <img width={128} height={128} src={ item.productImage } alt="thumbnail" 
-                                onClick={this.handleClick.bind(this, item, 'product')}
-                            />
+                                <img
+                                    id="itemImage"
+                                    width="300px" height="auto"
+                                    src={ item.productImage } alt="thumbnail"
+                                />
                             </Media.Left>
-                            <Media.Body>
-                                <Media.Heading> { item.productTitle.substring(0, 50) }  </Media.Heading>
-                                <p> Price: { item.price } </p>
-                                <p> Purchase date: { item.purchaseDate } </p>
-                                <p> Return date: { item.returnDate } </p>
-                                <p> Category: { item.type } </p>
-                                <p> Link: { item.productLink } </p>
-                            </Media.Body>
+                        </Media>
+                        <Media>
+                            <Media.Left>
+                                <p id="date"> { item.purchaseDate } </p>
+                            </Media.Left>
                         </Media>
                         </Media.Body>
                     </Media.ListItem>
                 </Media.List>
 
             </div>
-
         )
     }
 }

@@ -23,7 +23,7 @@ export default class Items extends Component {
                     <Col>
                         <ListGroup>
                             {
-                            this.state.purchasedItems.map((item, index) => (
+                            filteredItems.map((item, index) => (
                                 <ListGroupItem key={index}>
                                 <Item
                                     item={ item }
