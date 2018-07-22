@@ -5,14 +5,17 @@ import Item from './Item';
 export default class Items extends Component {
 
     render() {
-        const {filteredItems} = this.props;
+        const {filteredItems, handleCompanyClick} = this.props;
         return (
             <div>
                 <ListGroup>
                     {
                         filteredItems.map((item, index) => (
                             <ListGroupItem>
-                                <Item item={ item } />
+                                <Item
+                                    item={ item }
+                                    handleCompanyClick={handleCompanyClick}
+                                />
                             </ListGroupItem>
                         ))
                     }
