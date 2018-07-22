@@ -57,7 +57,7 @@ class App extends Component {
 
     return (
       <div>
-        {this.state.displayCompany && <CompanyInfo item={this.state.selectedItem}
+        {this.state.displayCompany && <CompanyInfo item={this.state.selectedItem} items={this.state.purchasedItems}
           handleBackToHome={this.handleBackToHome}/>}
         {this.state.displayProduct &&
           <Product
@@ -66,15 +66,19 @@ class App extends Component {
           />
         }
         {!this.state.displayCompany && !this.state.displayProduct &&
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to HackVan</h1>
-          </header>
-          <SearchBox searchChange={this.onSearchChange}/>
+          <div className="App">
+            <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h1 className="App-title">Welcome to HackVan</h1>
+            </header>
 
-          <Items filteredItems={filteredItems} handleImageClick={this.handleImageClick} />
-        </div>
+
+
+            <SearchBox searchChange={this.onSearchChange}/>
+
+            <Items filteredItems={filteredItems} handleImageClick={this.handleImageClick} />
+
+          </div>
         }
 
       </div>
