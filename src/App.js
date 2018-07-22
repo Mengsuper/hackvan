@@ -67,28 +67,32 @@ class App extends Component {
 
     return (
       <div>
-        {this.state.displayCompany && <CompanyInfo item={this.state.selectedItem} items={this.state.purchasedItems}
-          handleBackToHome={this.handleBackToHome}/>}
-        
+        {this.state.displayCompany &&
+          <CompanyInfo
+            item={this.state.selectedItem}
+            items={this.state.purchasedItems}
+            handleBackToHome={this.handleBackToHome}
+          />}
+
         {this.state.displayProduct &&
           <Product
             item={this.state.selectedItem}
             handleBackToHome={this.handleBackToHome}
           />
         }
-        
+
         {!this.state.displayCompany && !this.state.displayProduct &&
           <div className="App">
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
               <h1 className="App-title">Welcome to HackVan</h1>
             </header>
-            
+
             <Panel eventKey="1">
               <Panel.Heading>
-                <Panel.Title toggle> 
-                  <Button bsStyle="success" 
-                    onClick={this.handleBtnClick}> Display </Button> 
+                <Panel.Title toggle>
+                  <Button bsStyle="success"
+                    onClick={this.handleBtnClick}> Display </Button>
                 </Panel.Title>
                 <Panel.Body collapsible>
                   { this.state.displayUserStats && <img src={statImage}/>}
