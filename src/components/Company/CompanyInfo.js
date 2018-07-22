@@ -15,7 +15,6 @@ export default class CompanyInfo extends Component {
 	}
 
 	render() {
-
 		return (
 			<div>
 				<Button bsStyle="success" onClick={this.handleBackButton} > Back </Button>
@@ -23,7 +22,11 @@ export default class CompanyInfo extends Component {
 				  <Row>
 					<Col>
 					  <CompanyNameCard item={this.props.item} handleBackToHome={this.props.handleBackToHome} />
-					  <CompanyStats items={this.props.items.filter(item => item.companyName == this.props.item.companyName)} />
+					  <CompanyStats
+					  	items={this.props.items.filter(
+					  		item => item.companyName == this.props.item.companyName)}
+					  	handleImageClick={this.props.handleImageClick}
+					  />
 					</Col>
 				  </Row>
 				</Grid>

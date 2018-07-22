@@ -72,6 +72,7 @@ class App extends Component {
             item={this.state.selectedItem}
             items={this.state.purchasedItems}
             handleBackToHome={this.handleBackToHome}
+            handleImageClick={this.handleImageClick}
           />}
 
         {this.state.displayProduct &&
