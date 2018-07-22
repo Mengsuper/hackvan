@@ -1,0 +1,25 @@
+#productFrame {
+	width: 1200px;
+}
+
+button {
+	margin: 10px;
+	border-radius: 30px;
+}
+
+.multiline {
+	width:500px;
+	word-wrap: break-word;
+	text-transform: uppercase;
+	font-family: monospace;
+}
+
+.blue-text {
+	color: #579ABB;
+}
+
+.details {
+	color: #A3A7A9;
+	font-size: 16px;
+	margin-bottom: -2px;
+}
