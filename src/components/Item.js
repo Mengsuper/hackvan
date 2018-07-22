@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Media } from 'react-bootstrap';
-import './Item.css';
+//import './Item.css';
 
 export default class Item extends Component {
     constructor(props) {
@@ -21,27 +21,28 @@ export default class Item extends Component {
                         <Media.Left>
                             <img width={64} height={64} src={ item.productImage } alt="thumbnail"
                                 onClick={this.handleClick.bind(this, item, 'company')}/>
-
                         </Media.Left>
                         <Media.Body>
-                            <Media.Heading id="compName" onClick={this.handleClick.bind(this, item, 'company')} > {item.companyName} </Media.Heading>
-                        <Media>
-
-                            <Media.Body>
-                                <Media.Heading id="itemName">{ item.productTitle.substring(0,60) } </Media.Heading>
-                            </Media.Body>
-                        </Media>
-                        <Media>
                             <Media.Left>
-                                <img
-                                    id="itemImage"
-                                    width="300px" height="auto"
-                                    src={ item.productImage } alt="thumbnail"
-                                    onClick={this.handleClick.bind(this, item, 'product')}
-                                />
+                            <Media.Heading id="compName" onClick={this.handleClick.bind(this, item, 'company')} > {item.companyName} </Media.Heading>
                             </Media.Left>
-                        </Media>
-                        <Media>
+                            <Media>
+                                <Media.Left>
+                                    <Media.Heading id="itemName">{ item.productTitle.substring(0,60) } </Media.Heading>
+                                </Media.Left>
+                            </Media>
+                            
+                            <Media>
+                                <Media.Left>
+                                    <img
+                                        id="itemImage"
+                                        width="300px" height="auto"
+                                        src={ item.productImage } alt="thumbnail"
+                                        onClick={this.handleClick.bind(this, item, 'product')}
+                                    />
+                                </Media.Left>
+                            </Media>
+                            <Media>
                             <Media.Left>
                                 <p id="date"> { item.purchaseDate } </p>
                             </Media.Left>

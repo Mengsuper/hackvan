@@ -7,7 +7,7 @@ import SearchBox from './components/SearchBox';
 import CompanyInfo from './components/Company/CompanyInfo';
 import Product from './components/Product/Product';
 import purchasedItems from './components/dataset/purchase_history.json';
-import { Button } from 'react-bootstrap';
+import { Button, Panel } from 'react-bootstrap';
 import statImage from './statisticsPieChart.png';
 
 class App extends Component {
@@ -69,12 +69,14 @@ class App extends Component {
       <div>
         {this.state.displayCompany && <CompanyInfo item={this.state.selectedItem} items={this.state.purchasedItems}
           handleBackToHome={this.handleBackToHome}/>}
+        
         {this.state.displayProduct &&
           <Product
             item={this.state.selectedItem}
             handleBackToHome={this.handleBackToHome}
           />
         }
+        
         {!this.state.displayCompany && !this.state.displayProduct &&
           <div className="App">
             <header className="App-header">
@@ -82,8 +84,18 @@ class App extends Component {
               <h1 className="App-title">Welcome to HackVan</h1>
             </header>
             
-            <Button onClick={this.handleBtnClick}> Display </Button> 
-            { this.state.displayUserStats && <img src={statImage}/>}
+            <Panel eventKey="1">
+              <Panel.Heading>
+                <Panel.Title toggle> 
+                  <Button bsStyle="success" 
+                    onClick={this.handleBtnClick}> Display </Button> 
+                </Panel.Title>
+                <Panel.Body collapsible>
+                  { this.state.displayUserStats && <img src={statImage}/>}
+                </Panel.Body>
+              </Panel.Heading >
+            </Panel>
+
             <SearchBox searchChange={this.onSearchChange}/>
 
             <Items filteredItems={filteredItems} handleImageClick={this.handleImageClick} />
