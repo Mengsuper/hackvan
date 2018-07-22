@@ -14,14 +14,9 @@ export default class Items extends Component {
     componentDidMount() {
         this.setState({ purchasedItems })
     }
-    async fetchProductLinks (url) {
-        await fetch(url)
-            .then(res => res.json())
-            .then(data => console.log(data));
-    }
 
     render() {
-        const {filteredItems, handleCompanyClick} = this.props;
+        const {filteredItems, handleImageClick} = this.props;
         return (
             <Grid>
                 <Row>
@@ -32,7 +27,7 @@ export default class Items extends Component {
                                 <ListGroupItem key={index}>
                                 <Item
                                     item={ item }
-                                    handleCompanyClick={handleCompanyClick}
+                                    handleImageClick={handleImageClick}
                                 />
                                 </ListGroupItem>
                             ))

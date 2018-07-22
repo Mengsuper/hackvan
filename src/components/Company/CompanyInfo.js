@@ -4,12 +4,9 @@ import CompanyStats from './CompanyStats';
 
 export default class CompanyInfo extends Component {
 	render() {
-		const { companyName} = this.props;
 		return (
 			<div>
-				<CompanyNameCard
-					companyName={companyName}
-				/>
+				<CompanyNameCard item={this.props.item} handleBackToHome={this.props.handleBackToHome} />
 				<CompanyStats />
 			</div>
 		);

@@ -8,26 +8,27 @@ export default class Item extends Component {
         this.handleClick=this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.props.handleCompanyClick(this.props.item);
+    handleClick(item, type) {
+        this.props.handleImageClick(item, type);
     }
 
     render() {
-        const {item} = this.props;
+        const { item } = this.props;
         return (
             <div>
                 <Media.List>
                     <Media.ListItem>
                         <Media.Left>
-                            <img
-                                width={64} height={64} src={ item.productImage } alt="thumbnail"
-                                onClick={this.handleClick}/>
+                            <img width={64} height={64} src={ item.productImage } alt="thumbnail"
+                                onClick={this.handleClick.bind(this, item, 'company')}/>
                         </Media.Left>
                         <Media.Body>
                             <Media.Heading> {item.companyName} </Media.Heading>
                         <Media>
                             <Media.Left>
-                            <img width={128} height={128} src={ item.productImage } alt="thumbnail" />
+                            <img width={128} height={128} src={ item.productImage } alt="thumbnail" 
+                                onClick={this.handleClick.bind(this, item, 'product')}
+                            />
                             </Media.Left>
                             <Media.Body>
                                 <Media.Heading> { item.productTitle.substring(0, 50) }  </Media.Heading>
@@ -42,8 +43,6 @@ export default class Item extends Component {
                     </Media.ListItem>
                 </Media.List>
 
-
->>>>>>> 276931e92ca87528b68eaf04762777e572e038e4
             </div>
 
         )
