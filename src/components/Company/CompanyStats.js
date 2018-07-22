@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { ListGroup, ListGroupItem, Grid, Row, Col } from 'react-bootstrap';
+import "./Company.css"
+
 
 export default class CompanyStats extends Component {
 
@@ -9,10 +12,44 @@ export default class CompanyStats extends Component {
 			prices += parseInt(item.price);
 		}
 		return (
-			<div>
-				<h4>Items Purchased: { items.length } </h4>
-				<h4>Purchased Amount: {  prices } </h4>
-				<h4>Purchase History </h4>
+			<div className="CompAggInfo">
+				<Grid>
+					<Row className="show-grid">
+						<Col xs={6} md={8}>
+							<h6>Number of items purchased</h6>
+						</Col>
+						<Col xs={4} md={4}>
+							{ items.length }
+						</Col>
+					</Row>
+					<Row className="show-grid">
+						<Col xs={6} md={8}>
+							<h6>Total purchased amount</h6>
+						</Col>
+						<Col xs={4} md={4}>
+							${  prices }
+						</Col>
+					</Row>
+					<Row className="show-grid">
+						<Col  xs={6} md={8}>
+							<h6>Purchase history</h6>
+						</Col>
+					</Row>
+				</Grid>
+								<div>
+		                  {
+	                  		items.map((item, index) => (
+	                  				<img
+		                      		key={item.productTitle}
+		                      		className="product-image-list"
+		                      		width={200} height="auto"
+		                      		src={item.productImage}
+		                      		alt={item.productTitle}
+		                      	/>
+											  ))
+		                  }
+								</div>
+
 			</div>
 		);
 	}
