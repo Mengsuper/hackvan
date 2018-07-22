@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Media } from 'react-bootstrap';
+import { Media, Image } from 'react-bootstrap';
 //import './Item.css';
 
 export default class Item extends Component {
@@ -19,7 +19,8 @@ export default class Item extends Component {
                 <Media.List>
                     <Media.ListItem>
                         <Media.Left>
-                            <img width={64} height={64} src={ item.companyLogo } alt="thumbnail"
+                            <Image width={64} height={64} src={ item.companyLogo } circle alt="thumbnail"
+                                style={{"border": "solid 1px grey"}}
                                 onClick={this.handleClick.bind(this, item, 'company')}/>
                         </Media.Left>
                         <Media.Body>
@@ -34,7 +35,8 @@ export default class Item extends Component {
                             
                             <Media>
                                 <Media.Left>
-                                    <img
+                                    <Image
+                                        style={{"border": "solid 1px lightgrey"}}
                                         id="itemImage"
                                         width="300px" height="auto"
                                         src={ item.productImage } alt="thumbnail"
