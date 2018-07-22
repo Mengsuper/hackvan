@@ -8,7 +8,7 @@ import CompanyInfo from './components/Company/CompanyInfo';
 import Product from './components/Product/Product';
 import purchasedItems from './components/dataset/purchase_history.json';
 import { Button } from 'react-bootstrap';
-import statImage from '../public/statisticsPirChart.png';
+import statImage from './statisticsPieChart.png';
 
 class App extends Component {
   constructor() {
