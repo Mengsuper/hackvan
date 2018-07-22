@@ -6,6 +6,7 @@ import SearchBox from './components/SearchBox';
 // import Navigation from './components/Navigation';
 import CompanyInfo from './components/Company/CompanyInfo';
 import purchasedItems from './components/dataset/purchase_history.json';
+import Test from './components/Test';
 
 class App extends Component {
   constructor() {
@@ -61,10 +62,7 @@ class App extends Component {
             </div>
           );
           break;
-        case "":
-      };
-
-
+      }
   }
 }
 

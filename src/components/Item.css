@@ -1,0 +1,24 @@
+.media-list {
+    padding: 0px;
+}
+
+.media-body {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 5px;
+}
+
+.media-body .media-body {
+    margin-top: 10px;
+}
+
+.media-heading {
+    margin: auto;
+    width: 100%;
+    border: 3px solid blue;
+    padding: 0px;
+    text-align: left
+}
+
+
