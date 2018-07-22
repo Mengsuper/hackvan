@@ -15,6 +15,9 @@ export default class Product extends Component {
 
 	render() {
 		const { item } = this.props;
+		let deliverDate = new Date(item.purchaseDate);
+		deliverDate.setDate(deliverDate.getDate() + 30);
+
 		return (
 			<div id="productFrame">
 				<Button bsStyle="success" onClick={this.handleBackButton} > Back </Button>
@@ -26,7 +29,7 @@ export default class Product extends Component {
         		/>
 			    </Media.Left>
 			    <Media.Body>
-			    	<p class="blue-text "> Delivered: { item.purchaseDate }</p>
+			    	<p class="blue-text "> Delivered: { deliverDate.toISOString().split('T')[0]}</p>
 			    	<Media>
 				      <Media.Heading className="multiline">{ item.productTitle }</Media.Heading>
 				      <Media.Right>
