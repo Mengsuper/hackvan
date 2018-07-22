@@ -21,6 +21,7 @@ export default class Items extends Component {
     }
 
     render() {
+        const {filteredItems} = this.props;
         return (
             <Grid>
                 <Row>
@@ -38,6 +39,7 @@ export default class Items extends Component {
                             </ListGroupItem>
                             <ListGroupItem header="Heading 3" bsStyle="danger">
                                 Danger styling
+
                             </ListGroupItem>
                         </ListGroup>
                     </Col>

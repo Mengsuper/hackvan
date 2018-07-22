@@ -9,21 +9,32 @@ export default class Item extends Component {
     render() {
         let item = this.props.item;
         return (
-            
             <div>
-                <Media>
-                    <Media.Left>
-                        <Thumbnail src={ item.productImage } alt="171x180" responsive="true" />
-                    </Media.Left>
-                    <Media.Body>    
-                        <Media.Heading> { item.productTitle.substring(0, 50) }  </Media.Heading>
-                        <p> Price: { item.price } </p>
-                        <p> Purchase date: { item.purchaseDate } </p>
-                        <p> Return date: { item.returnDate } </p>
-                        <p> Category: { item.type } </p>
-                        <p> Link: { item.productLink } </p>
-                    </Media.Body>
-                </Media>
+                <Media.List>
+                    <Media.ListItem>
+                        <Media.Left>
+                            <img width={64} height={64} src={ item.productImage } alt="thumbnail" />
+                        </Media.Left>
+                        <Media.Body>
+                            <Media.Heading> {item.companyName} </Media.Heading>
+                        <Media>
+                            <Media.Left>
+                            <img width={128} height={128} src={ item.productImage } alt="thumbnail" />
+                            </Media.Left>
+                            <Media.Body>    
+                                <Media.Heading> { item.productTitle.substring(0, 50) }  </Media.Heading>
+                                <p> Price: { item.price } </p>
+                                <p> Purchase date: { item.purchaseDate } </p>
+                                <p> Return date: { item.returnDate } </p>
+                                <p> Category: { item.type } </p>
+                                <p> Link: { item.productLink } </p>
+                            </Media.Body>
+                        </Media>
+                        </Media.Body>
+                    </Media.ListItem>
+                </Media.List>
+
+            
             </div>
 
         )
