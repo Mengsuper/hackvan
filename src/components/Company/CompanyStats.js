@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 
 export default class CompanyStats extends Component {
+
 	render() {
+		let items = this.props.items;
+		let prices = 0;
+		for (let item of items) {
+			prices += parseInt(item.price);
+		}
 		return (
 			<div>
-				<p>Purchased Times: 1</p>
-				<p>Purchased Amount: $50</p>
-				<p>Purchase History </p>
+				<h4>Items Purchased: { items.length } </h4>
+				<h4>Purchased Amount: {  prices } </h4>
+				<h4>Purchase History </h4>
 			</div>
 		);
 	}

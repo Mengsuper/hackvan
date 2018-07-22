@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Thumbnail, Media } from 'react-bootstrap';
+import { Media } from 'react-bootstrap';
 import './Item.css';
 
 export default class Item extends Component {
@@ -24,7 +24,7 @@ export default class Item extends Component {
                         
                         </Media.Left>
                         <Media.Body>
-                            <Media.Heading id="compName"> {item.companyName} </Media.Heading>
+                            <Media.Heading id="compName" onClick={this.handleClick.bind(this, item, 'company')} > {item.companyName} </Media.Heading>
                         <Media>
                     
                             <Media.Body>
