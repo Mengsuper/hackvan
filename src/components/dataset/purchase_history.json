@@ -1,6 +1,7 @@
 [
   {
     "companyName": "Amazon",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/amazon-logo._CB192256676_.gif&imgrefurl=https://www.amazon.com/&h=30&w=140&tbnid=30BmUy1MB4mS1M:&q=amazon&tbnh=30&tbnw=140&usg=__iDOz6tCO9bbAxTnDxYCvDYMnc6Q%3D&vet=1&docid=U7u2aHWjLXK8AM&itg=1&hl=en&sa=X&ved=0ahUKEwj_juLejrLcAhUJIjQIHRVqBoUQ_B0IuAEwFg",
     "productTitle": "2x TheraBreath Dentist Recommended Fresh Breath Oral Rinse - Mild Flavor, 16 Ounce/473ML",
     "type": "Health & Body Care",
     "price": 22.75,
@@ -13,6 +14,7 @@
   },
   {
     "companyName": "GAP",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://www.gap.co.jp/products/res/images/Japan_new_nav2_logo.gif&imgrefurl=https://www.gap.co.jp/&h=95&w=95&tbnid=6EFCVEZjAofv8M:&q=gap&tbnh=95&tbnw=95&usg=__kbW1Cy21K_gmbUqIkp3etYhuQRQ%3D&vet=1&docid=NS21tU5uPvLxBM&itg=1&sa=X&ved=0ahUKEwiDj6XxjrLcAhXrGTQIHXPxDHQQ_B0I9gEwFQ",
     "productTitle": "Vintage Short Sleeve Crewneck T-Shirt",
     "type": "Fashion",
     "price": 9.99,
@@ -25,6 +27,7 @@
   },
   {
     "companyName": "GAP",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://www.gap.co.jp/products/res/images/Japan_new_nav2_logo.gif&imgrefurl=https://www.gap.co.jp/&h=95&w=95&tbnid=6EFCVEZjAofv8M:&q=gap&tbnh=95&tbnw=95&usg=__kbW1Cy21K_gmbUqIkp3etYhuQRQ%3D&vet=1&docid=NS21tU5uPvLxBM&itg=1&sa=X&ved=0ahUKEwiDj6XxjrLcAhXrGTQIHXPxDHQQ_B0I9gEwFQ",
     "productTitle": "GapFit Lightweight Mesh Insert Windbreaker",
     "type": "Fashion",
     "price": 84.95,
@@ -37,6 +40,7 @@
   },
   {
     "companyName": "Sephora",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://www.sephora.com/contentimages/homepage/homepage_sephoralogo_040915_image.png&imgrefurl=https://www.sephora.com/&h=60&w=464&tbnid=BVXPqla0eajk4M:&q=sephora&tbnh=19&tbnw=151&usg=__d7C_zo49FaBoZ7LALi_kzUOHeL4%3D&vet=1&docid=MBGgivYKGTp-qM&itg=1&sa=X&ved=0ahUKEwiT1Y_9jrLcAhU-CTQIHVlsC_IQ_B0IhwIwFw",
     "productTitle": "Darphin Environmental Lightweight Shield SPF",
     "type": "Beauty",
     "price": 50,
@@ -49,6 +53,7 @@
   },
   {
     "companyName": "Banana Repulic",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/3/31/Banana_Republic_logo.png&imgrefurl=https://commons.wikimedia.org/wiki/File:Banana_Republic_logo.png&h=453&w=3641&tbnid=PqvQ3EyUKB6L_M:&q=banana+republic&tbnh=18&tbnw=151&usg=__dntOZu6qzE1JDocBdl8osOqRNJk%3D&vet=1&docid=0kjZfxaYCT0VkM&itg=1&sa=X&ved=0ahUKEwjW6NWNj7LcAhXoHjQIHRxVBFkQ_B0IoAIwEg",
     "productTitle": "Heritage TENCEL%u2122 Utility Jogger Pant",
     "type": "Fashion",
     "price": 110,
@@ -61,6 +66,7 @@
   },
   {
     "companyName": "Hudson Bay",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Hudson%2527s_Bay_Company_%2528emblem%2529.svg/220px-Hudson%2527s_Bay_Company_%2528emblem%2529.svg.png&imgrefurl=https://en.wikipedia.org/wiki/Hudson%2527s_Bay_Company&h=187&w=220&tbnid=SQ-VG3u-cUzX5M:&q=hudson+bay&tbnh=128&tbnw=151&usg=__2jhv4RyNA4IIMRl4wapFWi2zYs4%3D&vet=1&docid=U66yNswSxeHpaM&itg=1&hl=en&sa=X&sqi=2&ved=0ahUKEwjmku3Oj7LcAhUQQ8AKHW_6CPEQ_B0IjwIwGw",
     "productTitle": "OPI BRIGHTS- Significant Other Color Nail Lacquer",
     "type": "Beauty & Personal Care",
     "price": 13,
@@ -73,6 +79,7 @@
   },
   {
     "companyName": "Hudson Bay",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Hudson%2527s_Bay_Company_%2528emblem%2529.svg/220px-Hudson%2527s_Bay_Company_%2528emblem%2529.svg.png&imgrefurl=https://en.wikipedia.org/wiki/Hudson%2527s_Bay_Company&h=187&w=220&tbnid=SQ-VG3u-cUzX5M:&q=hudson+bay&tbnh=128&tbnw=151&usg=__2jhv4RyNA4IIMRl4wapFWi2zYs4%3D&vet=1&docid=U66yNswSxeHpaM&itg=1&hl=en&sa=X&sqi=2&ved=0ahUKEwjmku3Oj7LcAhUQQ8AKHW_6CPEQ_B0IjwIwGw",
     "productTitle": "CALICO CRITTERS Cuddle Bear Family Four-Piece Set",
     "type": "Toys",
     "price": 29.99,
@@ -85,7 +92,8 @@
   },
   {
     "companyName": "Costco",
-    "productTitle": "webber naturals® - Ubiquinol 100 mg -- 2 x 100 Softgels",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://www.costco.com/wcsstore/CostcoGLOBALSAS/images/Costco_Logo-1.png&imgrefurl=https://www.costco.com/logo-media-requests.html&h=146&w=507&tbnid=SxjOM6asYthAXM:&q=costco&tbnh=43&tbnw=151&usg=___41WiFBg3GPBWA8_CtkKwaQPKZ4%3D&vet=1&docid=M2Q3QWqAHNJzdM&itg=1&sa=X&ved=0ahUKEwjFjcK1j7LcAhWKlCwKHX0kAV4Q_B0I5AEwEg",
+    "productTitle": "webber naturalsÂ® - Ubiquinol 100 mg -- 2 x 100 Softgels",
     "type": "Health & Beauty",
     "price": 69.99,
     "purchaseDate": "Mar., 29, 2018",
@@ -97,6 +105,7 @@
   },
   {
     "companyName": "Amazon",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/amazon-logo._CB192256676_.gif&imgrefurl=https://www.amazon.com/&h=30&w=140&tbnid=30BmUy1MB4mS1M:&q=amazon&tbnh=30&tbnw=140&usg=__iDOz6tCO9bbAxTnDxYCvDYMnc6Q%3D&vet=1&docid=U7u2aHWjLXK8AM&itg=1&hl=en&sa=X&ved=0ahUKEwj_juLejrLcAhUJIjQIHRVqBoUQ_B0IuAEwFg",
     "productTitle": "Olay Regenerist Luminous Facial Oil, 1.3 Fl Oz by Olay",
     "type": "Beauty",
     "price": 20.8,
@@ -109,6 +118,7 @@
   },
   {
     "companyName": "Amazon",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/amazon-logo._CB192256676_.gif&imgrefurl=https://www.amazon.com/&h=30&w=140&tbnid=30BmUy1MB4mS1M:&q=amazon&tbnh=30&tbnw=140&usg=__iDOz6tCO9bbAxTnDxYCvDYMnc6Q%3D&vet=1&docid=U7u2aHWjLXK8AM&itg=1&hl=en&sa=X&ved=0ahUKEwj_juLejrLcAhUJIjQIHRVqBoUQ_B0IuAEwFg",
     "productTitle": "Personal Alarm-120dB/130dB/140dB Emergency Personal Alarm Keychain with LED Flashlight for Self Defense Safety Protection",
     "type": "Safety",
     "price": 24.99,
@@ -121,6 +131,7 @@
   },
   {
     "companyName": "Amazon",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/amazon-logo._CB192256676_.gif&imgrefurl=https://www.amazon.com/&h=30&w=140&tbnid=30BmUy1MB4mS1M:&q=amazon&tbnh=30&tbnw=140&usg=__iDOz6tCO9bbAxTnDxYCvDYMnc6Q%3D&vet=1&docid=U7u2aHWjLXK8AM&itg=1&hl=en&sa=X&ved=0ahUKEwj_juLejrLcAhUJIjQIHRVqBoUQ_B0IuAEwFg",
     "productTitle": "Travel Adapter Wall Charger Europe",
     "type": "Electronics",
     "price": 17.49,
@@ -133,6 +144,7 @@
   },
   {
     "companyName": "Amazon",
+    "companyLogo": "https://www.google.com/imgres?imgurl=https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/amazon-logo._CB192256676_.gif&imgrefurl=https://www.amazon.com/&h=30&w=140&tbnid=30BmUy1MB4mS1M:&q=amazon&tbnh=30&tbnw=140&usg=__iDOz6tCO9bbAxTnDxYCvDYMnc6Q%3D&vet=1&docid=U7u2aHWjLXK8AM&itg=1&hl=en&sa=X&ved=0ahUKEwj_juLejrLcAhUJIjQIHRVqBoUQ_B0IuAEwFg",
     "productTitle": "Playtown: Emergency: A Lift-the-Flap book",
     "type": "Book",
     "price": 10.19,
