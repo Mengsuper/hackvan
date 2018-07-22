@@ -21,12 +21,12 @@ export default class Item extends Component {
                         <Media.Left>
                             <img width={64} height={64} src={ item.productImage } alt="thumbnail"
                                 onClick={this.handleClick.bind(this, item, 'company')}/>
-                        
+
                         </Media.Left>
                         <Media.Body>
                             <Media.Heading id="compName" onClick={this.handleClick.bind(this, item, 'company')} > {item.companyName} </Media.Heading>
                         <Media>
-                    
+
                             <Media.Body>
                                 <Media.Heading id="itemName">{ item.productTitle.substring(0,60) } </Media.Heading>
                             </Media.Body>
@@ -37,6 +37,7 @@ export default class Item extends Component {
                                     id="itemImage"
                                     width="300px" height="auto"
                                     src={ item.productImage } alt="thumbnail"
+                                    onClick={this.handleClick.bind(this, item, 'product')}
                                 />
                             </Media.Left>
                         </Media>

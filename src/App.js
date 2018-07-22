@@ -5,6 +5,7 @@ import Items from './components/Items';
 import SearchBox from './components/SearchBox';
 // import Navigation from './components/Navigation';
 import CompanyInfo from './components/Company/CompanyInfo';
+import Product from './components/Product/Product';
 import purchasedItems from './components/dataset/purchase_history.json';
 import { Button } from 'react-bootstrap';
 import statImage from '../public/statisticsPirChart.png';
@@ -68,7 +69,12 @@ class App extends Component {
       <div>
         {this.state.displayCompany && <CompanyInfo item={this.state.selectedItem} items={this.state.purchasedItems}
           handleBackToHome={this.handleBackToHome}/>}
-
+        {this.state.displayProduct &&
+          <Product
+            item={this.state.selectedItem}
+            handleBackToHome={this.handleBackToHome}
+          />
+        }
         {!this.state.displayCompany && !this.state.displayProduct &&
           <div className="App">
             <header className="App-header">
