@@ -7,7 +7,7 @@ import SearchBox from './components/SearchBox';
 import CompanyInfo from './components/Company/CompanyInfo';
 import Product from './components/Product/Product';
 import purchasedItems from './components/dataset/purchase_history.json';
-import { Button, Panel } from 'react-bootstrap';
+import { Button, Panel, Grid, Row, Col } from 'react-bootstrap';
 import statImage from './statisticsPieChart.png';
 
 class App extends Component {
@@ -96,16 +96,24 @@ class App extends Component {
               </Panel.Heading >
             </Panel>
 
-            <SearchBox searchChange={this.onSearchChange}/>
-
-            <Items filteredItems={filteredItems} handleImageClick={this.handleImageClick} />
+            <Grid>
+                <Row>
+                  <Col xsOffset={1} xs={10}>
+                    <SearchBox searchChange={this.onSearchChange}/>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xsOffset={1} xs={10}>
+                    <Items filteredItems={filteredItems} handleImageClick={this.handleImageClick} />
+                  </Col>
+                </Row>
+            </Grid>
 
           </div>
         }
 
       </div>
     );
-
   }
 }
 
