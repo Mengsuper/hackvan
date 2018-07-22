@@ -4,16 +4,7 @@ import Item from './Item';
 import purchasedItems from './dataset/purchase_history.json';
 
 export default class Items extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            purchasedItems: [],
-            links: []
-        }
-    }
-    componentDidMount() {
-        this.setState({ purchasedItems })
-    }
+
     async fetchProductLinks (url) {
         await fetch(url)
             .then(res => res.json())
@@ -28,7 +19,7 @@ export default class Items extends Component {
                     <Col>
                         <ListGroup>
                             {
-                            this.state.purchasedItems.map((item, index) => (
+                            filteredItems.map((item, index) => (
                                 <ListGroupItem key={index}>
                                 <Item
                                     item={ item }
