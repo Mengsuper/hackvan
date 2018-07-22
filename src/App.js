@@ -7,6 +7,8 @@ import SearchBox from './components/SearchBox';
 import CompanyInfo from './components/Company/CompanyInfo';
 import Product from './components/Product/Product';
 import purchasedItems from './components/dataset/purchase_history.json';
+import { Button } from 'react-bootstrap';
+import statImage from '../public/statisticsPirChart.png';
 
 class App extends Component {
   constructor() {
@@ -16,10 +18,12 @@ class App extends Component {
         purchasedItems: [],
         displayCompany: false,
         displayProduct: false,
-        selectedItem: {}
+        selectedItem: {},
+        displayUserStats: false
       }
       this.handleImageClick = this.handleImageClick.bind(this);
       this.handleBackToHome = this.handleBackToHome.bind(this);
+      this.handleBtnClick = this.handleBtnClick.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +51,12 @@ class App extends Component {
     })
   }
 
+  handleBtnClick() {
+    this.setState(prevState => ({
+      displayUserStats: !prevState.displayUserStats
+    }))
+  }
+
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value});
   }
@@ -71,9 +81,9 @@ class App extends Component {
               <img src={logo} className="App-logo" alt="logo" />
               <h1 className="App-title">Welcome to HackVan</h1>
             </header>
-
-
-
+            
+            <Button onClick={this.handleBtnClick}> Display </Button> 
+            { this.state.displayUserStats && <img src={statImage}/>}
             <SearchBox searchChange={this.onSearchChange}/>
 
             <Items filteredItems={filteredItems} handleImageClick={this.handleImageClick} />
