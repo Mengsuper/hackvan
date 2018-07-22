@@ -19,7 +19,7 @@ export default class Item extends Component {
                 <Media.List>
                     <Media.ListItem>
                         <Media.Left>
-                            <img width={64} height={64} src={ item.productImage } alt="thumbnail"
+                            <img width={64} height={64} src={ item.companyLogo } alt="thumbnail"
                                 onClick={this.handleClick.bind(this, item, 'company')}/>
 
                         </Media.Left>
